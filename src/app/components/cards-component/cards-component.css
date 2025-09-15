@@ -1,25 +1,26 @@
 body {
-  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  direction: rtl;
 }
 
 .cards-container-wrapper {
   margin-right: 240px; /* نفس عرض الـ sidebar */
-  padding: 20px;       /* مسافة داخلية للـ content */
+  margin-left: 0;      /* خليه صفر */
+  padding: 20px;
 }
 
 .cards-container {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 10px;
-  padding: 0 8px;
-  
+  padding: 0;
 }
 
 .card {
   border: 1px solid #E0E0E0;
   border-radius: 10px;
   overflow: hidden;
-  min-width: 100vh;
   box-sizing: border-box;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   direction: rtl;
