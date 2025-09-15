@@ -1,37 +1,26 @@
-<div class="exercises-container-wrapper">
 <div class="exercises-container">
-  <!-- كارد وردي واحد يحتوي على كل أنواع الأسئلة -->
-  <div class="exercise-card">
+
+  <!-- الكارد الوردي: source list -->
+  <div class="exercise-card" cdkDropList [cdkDropListData]="questionTypes" [cdkDropListConnectedTo]="['rightList']">
     <div class="exercise-content">
       <h3 class="exercise-title">اسحب نوع السؤال هنا</h3>
-
-      <!-- الثلاثة أنواع أسئلة تحت بعض -->
-      <div *ngFor="let type of questionTypes" 
-     cdkDrag
-     (cdkDragEnded)="onDrop(type)">
-  {{ type }}
-</div>
-
-
+      <div *ngFor="let type of questionTypes" cdkDrag>
+        <span class="drag-text">{{ type }}</span>
+      </div>
     </div>
   </div>
 
-  <!-- البوكس الرمادي -->
-<div class="right-cards" cdkDropList>
-  <div class="full-width-card">
-    <p class="full-width-text">
-      اسحب نوع السؤال هنا...
-    </p>
+  <!-- الكارد الرمادي: target list -->
+  <div class="right-cards" id="rightList" cdkDropList [cdkDropListData]="droppedQuestions" [cdkDropListConnectedTo]="['exerciseCard']" (cdkDropListDropped)="onDrop($event)">
+    <div class="full-width-card">
+      <p class="full-width-text">اسحب نوع السؤال هنا...</p>
+    </div>
+
+    <ng-container *ngFor="let q of droppedQuestions">
+      <app-single-choice-card-component *ngIf="q === 'اختيار فردي'"></app-single-choice-card-component>
+      <app-multiple-choice-card-component *ngIf="q === 'اختيار من متعدد'"></app-multiple-choice-card-component>
+      <app-text-card-component *ngIf="q === 'نص'"></app-text-card-component>
+    </ng-container>
   </div>
 
-  <ng-container *ngFor="let type of droppedTypes">
-    <app-single-choice-card-component *ngIf="type === 'اختيار فردي'"></app-single-choice-card-component>
-    <app-multiple-choice-card-component *ngIf="type === 'اختيار من متعدد'"></app-multiple-choice-card-component>
-    <app-text-card-component *ngIf="type === 'نص'"></app-text-card-component>
-  </ng-container>
 </div>
-
-
-</div>
-</div>
-

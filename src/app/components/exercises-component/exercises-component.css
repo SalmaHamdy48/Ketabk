@@ -1,9 +1,7 @@
-
 body, html {
   margin: 0;
   padding: 0;
 }
-
 
 .exercises-container {
   display: flex;
@@ -24,7 +22,7 @@ body, html {
   color: #000000;
   display: flex;
   flex-direction: column;
-  width: 250px;
+  width: 250px; /* حافظ على العرض */
   min-height: 300px;
 }
 
@@ -52,18 +50,21 @@ body, html {
 /* العنصر أثناء السحب */
 .cdk-drag-preview {
   opacity: 0.9;
-  transform: scale(1.05); /* تكبير بسيط أثناء السحب */
+  background-color: transparent !important; /* يبقى بس النص */
+  box-shadow: none !important;
+  transform: scale(1.05);
 }
 
 .cdk-drag-placeholder {
-  opacity: 0; /* العنصر يبقى مكانه لكن يختفي مؤقتًا */
+  opacity: 0; /* العنصر يبقى مكانه مؤقتًا */
 }
 
-/* البوكس الرمادي */
+/* الكارد الرمادي */
 .right-cards {
   display: flex;
   flex-direction: column;
   gap: 10px;
+  width: 100vh;
 }
 
 .full-width-card {
@@ -76,7 +77,7 @@ body, html {
   justify-content: flex-start;
   padding: 10px;
   direction: rtl;
-  width: 100vh;
+  min-width: 100vh; 
 }
 
 .full-width-text {
@@ -91,16 +92,6 @@ body, html {
   user-select: none;
   padding: 10px;
   border-radius: 8px;
-  background-color: transparent; /* خلي الخلفية شفافة */
+  background-color: transparent;
   display: inline-block;
 }
-
-.cdk-drag-preview {
-  background-color: transparent !important; /* أثناء السحب يبقى بس النص */
-  box-shadow: none !important;
-  transform: scale(1.05);
-}
-
-
-
-
