@@ -1,0 +1,200 @@
+.right-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex: 1;
+}
+
+.full-width-card {
+  background-color: #F8F8F8;
+  height: 75px;
+  border-radius: 10px;
+  border: 1px dotted #FFD4EC;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start; /* لتثبيت النص في الأعلى الأيمن */
+  padding: 10px;
+  direction: rtl;
+  position: relative; /* لضمان الثبات */
+ /* لتأكيد أخذ العرض الكامل */
+}
+
+.full-width-text {
+  color: #092434AB;
+  font-weight: 700;
+  font-size: 18px;
+  margin: 0;
+}
+
+.Card-text-container {
+  background-color: #F8F8F8;
+  display: flex;
+  flex-direction: column;
+  width: 100%; /* لتطابق عرض full-width-card */
+  justify-content: flex-start;
+  padding: 1rem;
+  border-radius: 10px;
+  box-sizing: border-box; /* لضمان احتساب الـ padding ضمن العرض */
+}
+
+.Card-text {
+  font-size: 24px;
+  font-weight: 700;
+  color: #092434;
+  margin: 0;
+}
+
+.Card-text-subtitle {
+  font-size: 18px;
+  font-weight: 500;
+  color: #092434;
+  background-color: #F8F8F8;
+  padding: 25px;
+  border-radius: 8px;
+  border: 1px solid #000000;
+}
+
+.options-row {
+  display: flex;
+  gap: 15px;
+  margin-top: 15px;
+}
+
+/* الخيار الوردي + */
+.pink-option {
+  background-color: #FFE8F5;
+  color: #fff;
+  padding: 0 10px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.plus-icon {
+  font-size: 20px;
+  font-weight: bold;
+  color: #FF3BA6;
+}
+
+/* خيارات الدائرة */
+.option-circle {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.option-circle input {
+  display: none;
+}
+
+.option-circle .circle {
+  width: 15px;
+  height: 15px;
+  border: 2px solid #FF3BA6;
+  border-radius: 50%;
+  display: inline-block;
+  position: relative;
+  transition: background-color 0.2s;
+}
+
+.add {
+  color: #FF3BA6;
+}
+
+.option-circle input:checked + .circle {
+  background-color: #FF3BA6;
+}
+
+.option-circle p {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 500;
+  color: #092433;
+}
+
+.two-options-row {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.option-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.sub-option {
+  width: 60%;
+  background-color: #FFFFFF;
+  border: 1px solid #0000001A;
+  border-radius: 10px;
+  padding-right: 10px;
+  margin-top: 8px;
+}
+
+.sub-option p {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.option-circle.correct-answer {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.option-circle.correct-answer input {
+  display: none;
+}
+
+.option-circle.correct-answer .circle {
+  width: 15px;
+  height: 15px;
+  border: 2px solid #FF3BA6;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.2s;
+  margin-right: 10rem;
+}
+
+.option-circle.correct-answer input:checked + .circle {
+  background-color: #FF3BA6;
+}
+
+.option-circle.correct-answer p {
+  font-size: 16px;
+  color: #092434;
+}
+
+.save {
+  background-color: #FF3BA6;
+  color: #fff;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  cursor: pointer;
+  height: 50px;
+  width: 150px;
+  justify-content: center;
+  font-size: 24px;
+  font-weight: 500;
+  margin: 0;
+}
+
+.delete-option {
+  display: flex;
+  background-color: #FEEDED;
+  padding: 0 20px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.delete-option p {
+  color: #F70505;
+}
