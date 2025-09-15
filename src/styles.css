@@ -1,1 +1,29 @@
-/* You can add global styles to this file, and also import other style files */
+
+
+/* ✅ Responsive */
+@media (max-width: 768px) {
+  .cards-container {
+    grid-template-columns: 1fr !important; /* كارت واحد في الصف */
+  }
+}
+
+@media (max-width: 768px) {
+  .cards-container {
+    grid-template-columns: 1fr;
+  }
+
+  .exercises-container {
+    flex-direction: column;
+    margin-right: 0;
+  }
+
+  .sidebar {
+    position: relative;
+    width: 100%;
+    height: auto;
+  }
+
+  .main-content {
+    margin-right: 0;
+  }
+}

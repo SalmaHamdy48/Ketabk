@@ -1,0 +1,32 @@
+<div class="cards-container-wrapper">
+  <div class="cards-container">
+    <div *ngFor="let subject of pagedSubjects" class="card">
+      <img [src]="subject.image" alt="Subject Image" class="card-image">
+      <div class="card-content">
+        <h3 class="card-title">{{ subject.name }}</h3>
+        <p class="card-description">{{ subject.description }}</p>
+        <div class="card-actions">
+          <span class="status">الحالة :</span>
+          <span class="card-level" [class.active]="subject.status === 'مكتمل'">
+            {{ subject.status }}
+          </span>
+        </div>
+        <div class="card-footer">
+          <span class="card-status">إضافة تمرين</span>
+          <img src="assets/icons/ArrowRight.png" alt="arrow" class="ArrowRight">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Pagination controls -->
+  <div class="pagination">
+    <button (click)="prevPage()" [disabled]="currentPage === 1">&laquo; السابق</button>
+    <button *ngFor="let page of [].constructor(totalPages); let i = index"
+            (click)="currentPage = i + 1"
+            [ngClass]="{'current-page': currentPage === i + 1}">
+      {{i + 1}}
+    </button>
+    <button (click)="nextPage()" [disabled]="currentPage === totalPages">التالي &raquo;</button>
+  </div>
+</div>
