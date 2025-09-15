@@ -1,0 +1,85 @@
+.app-header{
+    background-color: #FFD4EC;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+   direction: rtl;
+}
+
+.app-header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* يوزع العنوان يمين والأيقونات يسار */
+  padding: 0 2rem; /* مسافة داخلية */
+  max-width: 1000px; /* لو عايزة عرض ثابت */
+  margin: 0 auto;    /* يخلي المحتوى في النص */
+}
+
+
+.page-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #0D062D;
+}
+
+.icons{
+ gap: 0.5rem;
+    display: flex;
+}
+
+.icons button {
+  background-color: transparent; 
+  border: none;                                   
+  cursor: pointer;              
+}
+
+
+.icon-image {
+  width: 24px;
+  height: 24px;
+}
+
+.User-info{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.user-text {
+  display: flex;
+  align-items: center;
+    gap: 0.5rem;
+}
+
+.profile-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.profile-image {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  margin-bottom: 0.2rem;
+
+}
+
+.user-name {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #292D32;
+}
+
+.profile-name {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #0D062D;
+}
+
+.profile-role {
+  font-size: 1rem;
+  color: #092434;
+}
+
+.dropdown-icon img {
+  width: 16px;
+  height: 16px;
+}

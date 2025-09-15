@@ -1,0 +1,8 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  max-width: 100vw;   /* ما يتعداش عرض الشاشة */
+  overflow-x: hidden; /* يمنع الـ scroll الأفقي */
+  font-family: 'Tajawal', sans-serif; /* اختياري لو عايزة خط عربي جميل */
+}
+
